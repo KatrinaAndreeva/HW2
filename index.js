@@ -4,6 +4,8 @@ let goods = {
 }
 goods.price = 1000;
 goods.currency = "dollar";
+goods.model = "7";
+goods.color = "red";
 console.log(goods);
 
 //2.
@@ -35,7 +37,7 @@ alert(type);
 
 //2.
 let theNum = prompt("Enter your number", );
-if (theNum == 0) {
+if (theNum === 0) {
     theNum = 1;
 } else if (theNum < 0) {
     theNum = "less then zero";
@@ -64,7 +66,7 @@ let item = {
     price: '100$',
     discount: '15%'
 }
-if (item.discount.length > 0) {
+if (item.discount && parseInt(item.discount) > 0) {
     item.priceWithDiscount = parseInt(item.price) - (parseInt(item.price) * (parseInt(item.discount) / 100));
     console.log(item.priceWithDiscount + '$');
 } else {
